@@ -10,8 +10,8 @@ function TabButtonWrapper() {
     return (
         <div className='tabButtonsWrapper'>
             {
-                tabLabels.map((label) =>
-                    <TabButton label={label} />
+                tabLabels.map((label, index) =>
+                    <TabButton key={index} label={label} />
                 )
             }
         </div>
