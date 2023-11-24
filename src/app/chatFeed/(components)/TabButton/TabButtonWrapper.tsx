@@ -2,16 +2,23 @@ import React from 'react'
 import './styles.scss'
 import TabButton from './TabButton';
 
-type TabButtonLabel = 'Chats' | 'Calls';
-const tabLabels: TabButtonLabel[] = ['Chats', 'Calls'];
+type TabButtonLabel = {
+    key: number;
+    label: string;
+};
+
+const tabLabels: TabButtonLabel[] = [
+    { key: 1, label: 'Chats' },
+    { key: 2, label: 'Calls' },
+];
 
 function TabButtonWrapper() {
 
     return (
         <div className='tabButtonsWrapper'>
             {
-                tabLabels.map((label) =>
-                    <TabButton label={label} />
+                tabLabels.map((item) =>
+                    <TabButton key={item.key} label={item.label} />
                 )
             }
         </div>

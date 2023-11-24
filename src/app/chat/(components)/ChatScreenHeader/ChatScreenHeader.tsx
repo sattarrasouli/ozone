@@ -5,7 +5,7 @@ interface ChatHeaderProps {
     children: ReactNode;
 }
 
-function ChatHeader({ children }: ChatHeaderProps) {
+function ChatScreenHeader({ children }: ChatHeaderProps) {
     return (
         <div className='chatHeader'>
             {children}
@@ -13,4 +13,4 @@ function ChatHeader({ children }: ChatHeaderProps) {
     )
 }
 
-export default ChatHeader
+export default ChatScreenHeader

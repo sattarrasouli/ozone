@@ -1,16 +1,22 @@
+"use client"
 import React from 'react'
-import SearchBar from './(components)/SearchBarInput/SearchBarInput'
-import ChatHeader from './(components)/ChatHeader/ChatHeader'
-import TabButtonWrapper from './(components)/TabButton/TabButtonWrapper'
+import { MessageProvider } from './(components)/AddMessageHook/AddMessageHook'
+import ChatScreenHeader from './(components)/ChatScreenHeader/ChatScreenHeader'
+import Footer from './(components)/footer/Footer'
+import HeaderButtons from './(components)/header/HeaderButtons'
+import './styles.scss'
+function layout({ children }: { children: React.ReactNode }) {
 
-function layout() {
     return (
-        <>
-            <ChatHeader >
-                <SearchBar />
-                <TabButtonWrapper />
-            </ChatHeader>
-        </>
+        <div className='layoutChatScreen'>
+            <MessageProvider>
+                <ChatScreenHeader >
+                    <HeaderButtons />
+                </ChatScreenHeader>
+                {children}
+                <Footer />
+            </MessageProvider>
+        </div>
     )
 }
 

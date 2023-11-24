@@ -1,0 +1,36 @@
+.chatScreenHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .leftSide {
+        display: flex;
+        flex-direction: row;
+
+        .name-avatar-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            p {
+                color: #fff;
+                color: #FFF;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            img {
+                border-radius: 30px;
+                margin-left: 2px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .rightSide {
+        display: flex;
+        align-items: center;
+    }
+}

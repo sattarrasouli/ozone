@@ -1,0 +1,64 @@
+.chatCard {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+
+    .userInfo {
+
+        display: flex;
+        flex-direction: row;
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            overflow: hidden;
+        }
+
+        .nameAndLatestMsg {
+            margin-left: 3px;
+
+            p:first-child {
+                font-size: 16px;
+                font-weight: 500;
+                color: rgba(25, 25, 25, 0.95);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100px;
+            }
+
+            p:nth-child(2) {
+                font-size: 12px;
+                font-weight: 400;
+                color: rgba(25, 25, 25, 0.60);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100px;
+            }
+        }
+    }
+
+    .time {
+        p {
+            color: rgba(25, 25, 25, 0.60);
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+        }
+    }
+}
+
+.chatFeed {
+    padding-bottom: 60px;
+
+    #loading-text {
+        color: #000;
+        margin: 0 30px 10px;
+    }
+}
