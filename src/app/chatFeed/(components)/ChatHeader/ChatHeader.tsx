@@ -7,7 +7,7 @@ interface ChatHeaderProps {
 
 function ChatHeader({ children }: ChatHeaderProps) {
     return (
-        <div className='chatHeader'>
+        <div className='HeaderChatFeed'>
             {children}
         </div>
     )
