@@ -1,8 +1,11 @@
 import React from 'react'
+import MessageWrapper from './(components)/messages/MessageWrapper'
 
 function page() {
     return (
-        <div>page</div>
+        <>
+            <MessageWrapper />
+        </>
     )
 }
 

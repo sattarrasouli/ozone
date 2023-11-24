@@ -1,16 +1,22 @@
-import { useSearchParams } from 'next/navigation'
+"use client"
 import React from 'react'
-import ChatHeader from '../chatFeed/(components)/ChatHeader/ChatHeader'
+import { MessageProvider } from './(components)/AddMessageHook/AddMessageHook'
+import ChatScreenHeader from './(components)/ChatScreenHeader/ChatScreenHeader'
+import Footer from './(components)/footer/Footer'
 import HeaderButtons from './(components)/header/HeaderButtons'
-
-function layout() {
+import './styles.scss'
+function layout({ children }: { children: React.ReactNode }) {
 
     return (
-        <>
-            <ChatHeader >
-                <HeaderButtons />
-            </ChatHeader>
-        </>
+        <div className='layoutChatScreen'>
+            <MessageProvider>
+                <ChatScreenHeader >
+                    <HeaderButtons />
+                </ChatScreenHeader>
+                {children}
+                <Footer />
+            </MessageProvider>
+        </div>
     )
 }
 

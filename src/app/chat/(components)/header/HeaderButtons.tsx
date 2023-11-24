@@ -20,7 +20,6 @@ function HeaderButtons() {
     const router = useRouter();
 
     const handleBackToFeed = () => {
-        console.log('first')
         router.push(`/chatFeed`);
     };
 
