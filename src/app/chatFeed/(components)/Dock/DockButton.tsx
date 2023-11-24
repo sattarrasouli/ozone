@@ -1,6 +1,6 @@
 import React from 'react'
-import { ButtonInfo } from './DockWrapper'
 import './styles.scss'
+import { ButtonInfo } from './DockWrapper'
 
 function DockButton({ buttonSpec }: { buttonSpec: ButtonInfo }) {
     return (

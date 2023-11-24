@@ -1,10 +1,13 @@
 import React from 'react'
-import ChatCard from './ChatCard'
+
 import './styles.scss'
+import ChatCard from './ChatCard'
+
 function ChatFeed() {
     return (
         <div className='chatFeed'>
             <ChatCard />
+            {/* <ChatCard />
             <ChatCard />
             <ChatCard />
             <ChatCard />
@@ -19,8 +22,7 @@ function ChatFeed() {
             <ChatCard />
             <ChatCard />
             <ChatCard />
-            <ChatCard />
-            <ChatCard />
+            <ChatCard /> */}
             <ChatCard />
         </div>
     )
