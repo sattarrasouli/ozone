@@ -27,8 +27,8 @@ A simple chat application that fetches chat messages from [Typicode Placeholder 
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-username/chat-app-nextjs.git
+   ```bash[
+   git clone https://github.com/sattarrasouli/ozone.git
 
 ## Getting Started
 
