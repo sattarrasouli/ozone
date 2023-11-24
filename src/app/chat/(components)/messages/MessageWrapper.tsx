@@ -3,11 +3,16 @@ import React, { useEffect, useRef, useState } from 'react'
 import Message from './Message'
 import "./styles.scss"
 import { useMessageContext } from '../AddMessageHook/AddMessageHook';
+import Image from 'next/image';
 
 function MessageWrapper() {
     const { messages, addMessage } = useMessageContext();
+    let chatContainer: HTMLElement | null = null
 
-    const chatContainer: HTMLElement | null = document.getElementById('chat-container')
+    if (typeof document !== 'undefined') {
+        chatContainer = document.getElementById('chat-container')
+    }
+
     if (chatContainer !== null) {
         chatContainer.scrollTop = chatContainer.scrollHeight
     }
@@ -48,7 +53,7 @@ function MessageWrapper() {
                 className={`scroll-to-bottom-button ${isVisible ? 'visible' : ''}`}
                 onClick={scrollToBottom}
             >
-                <img src='/images/down-arrow.svg' alt='arrow-icon' width={`20px`} height={`20px`} />
+                <Image src='/images/down-arrow.svg' alt='arrow-icon' width={20} height={20} />
             </button>
             <div ref={dummyRef} style={{ height: '1px', width: '1px' }}></div>
         </div>

@@ -2,6 +2,7 @@
 import React from 'react'
 import './styles.scss'
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 interface UserInfoProps {
     item: {
@@ -29,7 +30,7 @@ function ChatCard({ item }: UserInfoProps) {
         <div className='chatCard' onClick={() => handleChatClick(id)}>
             <div className='userInfo'>
                 <div className='avatar'>
-                    <img src={url} alt='people-avatar' width={`100%`} height={`100%`} />
+                    <Image src={url} alt='people-avatar' width={100} height={100} />
                 </div>
                 <div className='nameAndLatestMsg'>
                     <p>{title}</p>

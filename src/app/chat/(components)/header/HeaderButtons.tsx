@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation';
 import IconButton from '../iconButton/IconButton';
 import "./styles.scss";
+import Image from 'next/image';
 
 
 export interface ButtonInfo {
@@ -30,7 +31,7 @@ function HeaderButtons() {
             <div className='leftSide'>
                 <IconButton buttonSpec={BACK_BUTTON} />
                 <div className='name-avatar-section'>
-                    <img src='/images/avatar.jpeg' alt='user-avatar' width={`30px`} height={`30px`} />
+                    <Image src='/images/avatar.jpeg' alt='user-avatar' width={30} height={30} />
                     <p>test</p>
                 </div>
             </div>
