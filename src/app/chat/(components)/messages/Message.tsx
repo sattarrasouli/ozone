@@ -1,5 +1,6 @@
 import React from 'react'
 import "./styles.scss"
+import Image from 'next/image';
 
 interface IChatMessageProps {
     message: string;
@@ -13,7 +14,7 @@ function Message({ message, isSent }: IChatMessageProps) {
             <p>{message}</p>
             <div className='time-section'>
                 <small>11:09</small>
-                <img src='/images/read-sign.svg' alt='read-icon' width={`14px`} height={`7px`} />
+                <Image src='/images/read-sign.svg' alt='read-icon' width={14} height={7} />
             </div>
         </div>
     )

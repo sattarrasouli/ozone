@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import IconButton from '../iconButton/IconButton';
 import "./styles.scss"
 import { useMessageContext } from '../AddMessageHook/AddMessageHook';
+import Image from 'next/image';
 
 type IconButton = {
     alt: string;
@@ -64,11 +65,11 @@ function Footer() {
                 {
                     inputMessage ?
                         <button onClick={handleSendMessage}>
-                            <img src='/images/send.svg' alt='mic-icon' />
+                            <Image src='/images/send.svg' alt='mic-icon' width={18} height={18} />
                         </button>
                         :
                         <button>
-                            <img src='/images/audio.svg' alt='mic-icon' />
+                            <Image src='/images/audio.svg' alt='mic-icon' width={18} height={18} />
                         </button>
                 }
             </div>

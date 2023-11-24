@@ -7,8 +7,10 @@ export default function Home() {
 
   useEffect(() => {
     router.push('/chatFeed');
-  }, []);
+  }, [router]);
   return (
-    null
+    <main>
+      <p>chat app</p>
+    </main>
   )
 }

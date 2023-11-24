@@ -1,11 +1,12 @@
 import React from 'react'
 import './styles.scss'
 import { ButtonInfo } from './DockWrapper'
+import Image from 'next/image'
 
 function DockButton({ buttonSpec }: { buttonSpec: ButtonInfo }) {
     return (
         <button className='dockButton'>
-            <img src={buttonSpec.icon} alt={`icon-${buttonSpec.label}`} width={`100%`} height={`100%`} />
+            <Image src={buttonSpec.icon} alt={`icon-${buttonSpec.label}`} width={24} height={24} />
             <p>{buttonSpec.label}</p>
         </button>
     )
